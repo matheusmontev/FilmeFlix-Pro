@@ -1,5 +1,6 @@
 [versions]
 agp = "9.1.0"
+kotlin = "2.0.0"
 coreKtx = "1.10.1"
 junit = "4.13.2"
 junitVersion = "1.1.5"
@@ -10,6 +11,12 @@ activity = "1.8.0"
 constraintlayout = "2.1.4"
 fragment = "1.8.9"
 recyclerview = "1.4.0"
+ksp = "2.0.0-1.0.21"
+coroutines = "1.8.1"
+retrofit = "2.11.0"
+room = "2.7.0-alpha01"
+sqliteJdbc = "3.45.1.0"
+lifecycle = "2.8.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -19,10 +26,21 @@ androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-co
 androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
+androidx-activity-ktx = { group = "androidx.activity", name = "activity-ktx", version.ref = "activity" }
 androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
 androidx-fragment = { group = "androidx.fragment", name = "fragment", version.ref = "fragment" }
 androidx-recyclerview = { group = "androidx.recyclerview", name = "recyclerview", version.ref = "recyclerview" }
+kotlinx-coroutines-core = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "coroutines" }
+retrofit = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit" }
+retrofit-converter-gson = { group = "com.squareup.retrofit2", name = "converter-gson", version.ref = "retrofit" }
+room-runtime = { group = "androidx.room", name = "room-runtime", version.ref = "room" }
+room-ktx = { group = "androidx.room", name = "room-ktx", version.ref = "room" }
+room-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "room" }
+sqlite-jdbc = { group = "org.xerial", name = "sqlite-jdbc", version.ref = "sqliteJdbc" }
+androidx-lifecycle-viewmodel-ktx = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-ktx", version.ref = "lifecycle" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
 

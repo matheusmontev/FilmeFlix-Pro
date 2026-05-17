@@ -1,17 +1,14 @@
 plugins {
     alias(libs.plugins.android.application)
+    alias(libs.plugins.ksp)
 }
 
 android {
-    namespace = "com.example.myapplication"
-    compileSdk {
-        version = release(36) {
-            minorApiLevel = 1
-        }
-    }
+    namespace = "com.seu.filmeflix"
+    compileSdk = 36
 
     defaultConfig {
-        applicationId = "com.example.myapplication"
+        applicationId = "com.seu.filmeflix"
         minSdk = 24
         targetSdk = 36
         versionCode = 1
@@ -40,9 +37,29 @@ dependencies {
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
     implementation(libs.androidx.activity)
+    implementation(libs.androidx.activity.ktx)
     implementation(libs.androidx.constraintlayout)
     implementation(libs.androidx.fragment)
     implementation(libs.androidx.recyclerview)
+
+    // Lifecycle
+    implementation(libs.androidx.lifecycle.viewmodel.ktx)
+
+    // Retrofit
+    implementation(libs.retrofit)
+    implementation(libs.retrofit.converter.gson)
+
+    // Room
+    implementation(libs.room.runtime)
+    implementation(libs.room.ktx)
+    ksp(libs.room.compiler)
+
+    // Coroutines
+    implementation(libs.kotlinx.coroutines.core)
+
+    // SQLite JDBC (Requested by user)
+    implementation(libs.sqlite.jdbc)
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
