@@ -1,6 +1,6 @@
 plugins {
     alias(libs.plugins.android.application)
-    // alias(libs.plugins.kotlin.android) // Removido para evitar conflito, já aplicado via alias no nível raiz
+    alias(libs.plugins.kotlin.android)
     alias(libs.plugins.ksp)
 }
 
