@@ -1,15 +1,17 @@
 plugins {
     alias(libs.plugins.android.application)
+    // alias(libs.plugins.kotlin.android) // Removido para evitar conflito, já aplicado via alias no nível raiz
     alias(libs.plugins.ksp)
 }
 
 android {
     namespace = "com.seu.filmeflix"
-    compileSdk = 36
+    compileSdk = 37
 
     defaultConfig {
         applicationId = "com.seu.filmeflix"
         minSdk = 24
+        //noinspection OldTargetApi
         targetSdk = 36
         versionCode = 1
         versionName = "1.0"
