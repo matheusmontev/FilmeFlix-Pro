@@ -6,13 +6,13 @@ plugins {
 
 android {
     namespace = "com.seu.filmeflix"
-    compileSdk = 37
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.seu.filmeflix"
         minSdk = 24
         //noinspection OldTargetApi
-        targetSdk = 36
+        targetSdk = 35
         versionCode = 1
         versionName = "1.0"
 
